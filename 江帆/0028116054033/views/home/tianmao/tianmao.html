@@ -1,0 +1,51 @@
+<ion-view view-title="天猫商城">
+    <ion-content class="has-subheader">
+        <ion-nav-bar class="bar-dark">
+        </ion-nav-bar>
+        <ion-item></ion-item>
+        <ion-slide-box auto-play="true" does-continue="true">
+            <ion-slide>
+                <div class="box">
+                    <img src="images/donghua1.jpg">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/donghua2.jpg">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/donghua3.jpg">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/donghua4.jpg">
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box">
+                    <img src="images/donghua5.jpg">
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+        <!--下拉刷新-->
+        <ion-refresher pulling-text="下拉刷新" pulling-icon="ion-load-d" on-refresh="refresh()" >
+        </ion-refresher>
+        <ion-list class="list card" ng-repeat="product in data.products">
+            <ion-item class="item item-avatar item-text-wrap">
+                <img ng-src="{{product.imgSrc}}">
+                <h2>{{product.name}}</h2>
+                <p><i class="assertive">优惠价:{{product.price|currency:"￥"}}</i> {{product.desc}} </p>
+            </ion-item>
+            <ion-item class="item item-image">
+                <img ng-src="{{product.imgSrc}}">
+            </ion-item>
+            <ion-item class="item-dark">
+                <button class="button button-full icon-left ion-ios-cart-outline button-assertive" ng-click="addBuyCar(product)">立即购买</button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <div class="button button-icon ion-arrow-up-a Top " ng-click="Top()"></div>
+</ion-view>

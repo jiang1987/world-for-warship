@@ -1,0 +1,99 @@
+.box, .box img {
+    height: 100%;
+    width: 100%
+}
+
+.headBox, .headBox img {
+    height: 100%;
+}
+.headBox img{
+    position: relative;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+
+.colBox, .colBox img {
+    height: 50px;
+    width: 50px;
+}
+.zxBox,.zxBox img{
+    height:150px;
+    width:150px;
+}
+.bgDiscover {
+    background: url("../images/bgdiscover1.jpg") no-repeat center center;
+    background-size: cover;
+}
+.bgMy {
+    background: url("../images/bgmy4.jpg") no-repeat center center;
+    background-size:cover;
+}
+.item-complex,.item-content,.item-radio{
+    background-color:rgba(255,255,255,0) !important;
+}
+.side-menu-box{
+    background:url("../images/slideBg1.jpg") no-repeat center center;
+    background-size:cover
+}
+.Top{
+    font-size:2em;
+    color:red;
+    position:fixed;
+    bottom:44px;
+    right:0;
+}
+.transparency{
+    background-color:rgba(255,255,255,0) !important;
+    border:0;
+}
+.popup{
+    border-radius:20px !important;
+    background-color:rgba(255,255,255,0.8) !important;
+}
+#lead-view .slider{
+    height:100%
+}
+.myWorld{
+    background:url("../images/bgmy4.jpg") no-repeat center center;
+    background-size:cover;
+}
+
+.myRim{
+    background:url("../images/bgdiscover4.jpg") no-repeat center center;
+    background-size:cover;
+}
+.myWarShip{
+    background:url("../images/bgdiscover3.jpg") no-repeat center center;
+    background-size:cover;
+}
+.myWorld h2,.myRim h2,.myWarShip h2{
+    position: fixed;
+    bottom:150px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.myWarShip a{
+    font-size:26px;
+    position: fixed;
+    bottom:100px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.fontWeight{
+    font-weight: bold !important;
+    text-shadow: 0 0 2px #000 ;
+
+}
+textarea{
+    resize:none;
+}
+input{
+    display: inline-block;
+    border: 0;
+    height:44px;
+    width:44px;
+    background:#fff;
+}

@@ -1,0 +1,22 @@
+<ion-view view-title="评论">
+    <ion-content class="has-header has-subheader">
+        <ion-nav-bar class="bar-calm">
+            <ion-nav-back-button></ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-item>
+            1
+        </ion-item>
+        <ion-list>
+            <form name="pingLun" novalidate>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">评论</span>
+                    <textarea required name="text" ng-model="text" minlength="8" placeholder="请输入评论不少于8个字" rows="8"></textarea>
+                </label>
+            </form>
+        </ion-list>
+        <div class="button-bar bar-calm">
+            <a class="button">取消</a>
+            <a class="button" ng-disabled="pingLun.$invalid">提交</a>
+        </div>
+    </ion-content>
+</ion-view>

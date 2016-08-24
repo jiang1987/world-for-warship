@@ -1,0 +1,42 @@
+<ion-view view-title="购物车">
+    <ion-content>
+        <ion-nav-bar class="bar-calm" >
+            <ion-nav-buttons side="left">
+                <a class="button button-clear icon ion-arrow-left-a" ui-sref="tabs.home.tianmao">战舰商城</a>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <a class="button button-clear icon ion-arrow-right-a" ui-sref="tabs.home.zhanjian">首页</a>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-item>1</ion-item>
+        <ion-item ng-show="carData.length == 0">
+           您目前购物车为空，请前往商城购物。
+            <a class="button button-assertive" ui-sref="tabs.home.tianmao">继续购物</a>
+        </ion-item>
+        <div ng-hide="carData.length == 0">
+            <ion-list ng-repeat="item in carData">
+                <ion-item class="item-thumbnail-right" >
+                    <img ng-src=" {{item.product.imgSrc}}">
+                    <h2>{{item.product.name}}</h2>
+                    <p>单价:{{item.product.price|currency:"￥"}}</p>
+                    <form>
+                        数量:
+                        <input type="button" value="+" ng-click="addNum(item)">
+                        <span style="display:inline-block;width:30px;text-align: center">{{item.number}}</span>
+                        <input type="button" value="-" ng-click="downNum(item)">
+                        <br>
+                        合计:{{item.product.price*item.number|currency:"￥"}}
+                    </form>
+                    <ion-option-button class="button-assertive" ng-click="removeProduct(item)">删除</ion-option-button>
+                </ion-item>
+            </ion-list>
+            <ion-item>
+                <span>总金额:{{totalBuyMonet() | currency:"RMB ￥"}}</span>
+            </ion-item>
+            <div class="button-bar">
+                <a class="button button-assertive">继续购买</a>
+                <a class="button button-assertive">提交订单</a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

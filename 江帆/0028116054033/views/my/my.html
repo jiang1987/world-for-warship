@@ -1,0 +1,22 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar class="bar-dark">
+        <button class="button button-clear icon ion-navicon-round" menu-toggle></button>
+        <div class="title headBox"><img src="images/logo.png"></div>
+        <button class="button button-clear button-icon ion-ios-cart-outline " ui-sref="buyCar">
+            <span class="badge badge-assertive">{{totalNumber()}}</span>
+        </button>
+    </ion-header-bar>
+    <ion-content class="bgMy has-header">
+        <ion-list>
+            <ion-item class="button button-clear button-block button-calm icon-left ion-cube" ui-sref="tabs.collect">
+                <h2 class="fontWeight light">我的收藏</h2>
+            </ion-item>
+            <ion-item class="button button-clear button-block button-royal icon-left ion-trophy" ui-sref="tabs.standings">
+                <h2 class="fontWeight balanced">我的战绩</h2>
+            </ion-item>
+            <ion-item class="button button-clear button-block button-dark icon-left ion-compose" ui-sref="tabs.comment">
+                <h2 class="fontWeight assertive">我的评论</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="我的好友">
+    <ion-content>
+        <ion-nav-bar class="bar-calm">
+            <ion-nav-buttons side="left">
+                <a class="button button-clear icon ion-arrow-left-a" ui-sref="tabs.home.zhanjian">首页</a>
+            </ion-nav-buttons>
+            <ion-item>1</ion-item>
+        </ion-nav-bar>
+        <ion-list ng-repeat="friend in data">
+            <ion-item>
+                {{friend.name}}
+                <ion-option-button class="button-assertive">删除</ion-option-button>
+                <ion-option-button class="button-positive">编辑</ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,152 @@
+<ion-view  view-title="战舰百科">
+    <ion-content class="has-subheader">
+        <ion-nav-bar class="bar-dark">
+        </ion-nav-bar>
+        <ion-item></ion-item>
+        <ion-list class="card">
+            <ion-item>
+                <h2 class="button button-clear button-full button-assertive"
+                    ng-click="data.showQ=!data.showQ">
+                    一战至今最活跃的舰种——驱逐舰</h2>
+            </ion-item>
+            <ion-list class="item-text-wrap " ng-hide="data.showQ">
+                <ion-item class="item-avatar" ui-sref="tabs.home.mxqz">
+                    <img src="images/mx.jpg">
+                    <h2>M系</h2>
+                    <p>鱼雷相对慢，但是火炮猛，装填超快。 缺点，比较依赖走位和烟雾</p>
+                </ion-item>
+                <ion-item class="item-avatar" ui-sref="tabs.home.rxqz">
+                    <img src="images/rx.jpg">
+                    <h2>R系</h2>
+                    <p>强大雷击能力，6级以上鱼雷射程最远，伤害最高，但炮击能力很差</p>
+                </ion-item>
+                <ion-item class="item-avatar">
+                    <img src="images/sx.jpg">
+                    <h2>S系</h2>
+                    <p>火炮超猛，上穿巡洋，下揍战列。缺点，鱼雷就是看的。</p>
+                </ion-item>
+            </ion-list>
+            <ion-item class="box">
+                <img src="images/zjlx_bg1.png">
+                <div class="row">
+                    <div class="col colBox col-offset-10" ng-click="showYanWu()">
+                        <img src="images/lx1_1.png">
+                    </div>
+                    <div class="col colBox" ng-click="showYuLei()">
+                        <img src="images/lx1_2.png">
+                    </div>
+                    <div class="col colBox">
+                        <img src="images/lx1_3.png" ng-click="showXianFen()">
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item>
+                <h2 class="button button-clear button-full button-assertive"
+                    ng-click="data.showX=!data.showX">
+                    孤独的猎手——轻重型巡洋舰</h2>
+            </ion-item>
+            <ion-list class="item-text-wrap item-remove-animate" ng-hide="data.showX">
+                <ion-item class="item-avatar">
+                    <img src="images/mx.jpg" ui-sref="tabs.home.mxxy">
+                    <h2>M系</h2>
+                    <p>防空强，装填快。缺点是弹道过高，输出弱</p>
+                </ion-item>
+                <ion-item class="item-avatar">
+                    <img src="images/rx.jpg">
+                    <h2>R系</h2>
+                    <p>有鱼雷，火控好，着火率高。缺点是装弹慢，炮塔转速慢</p>
+                </ion-item>
+                <ion-item class="item-avatar">
+                    <img src="images/sx.jpg">
+                    <h2>S系</h2>
+                    <p>火控一般，后期基本坑到底</p>
+                </ion-item>
+                <ion-item class="item-avatar">
+                    <img src="images/dx.jpg">
+                    <h2>D系</h2>
+                    <p>处于美系和日系之间的逗比产物。不推荐。</p>
+                </ion-item>
+            </ion-list>
+            <ion-item class="box">
+                <img src="images/zjlx_bg3.png">
+                <div class="row">
+                    <div class="col colBox col-offset-10">
+                        <img src="images/lx2_1.png">
+                    </div>
+                    <div class="col colBox">
+                        <img src="images/lx2_2.png">
+                    </div>
+                    <div class="col colBox">
+                        <img src="images/lx2_3.png">
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-list class="card">
+            <ion-item>
+                <h2 class="button button-clear button-full button-assertive"
+                    ng-click="data.showZ=!data.showZ">称霸海上的重炮手——战列舰</h2>
+            </ion-item>
+            <ion-list class="item-text-wrap item-remove-animate" ng-hide="data.showZ">
+                <ion-item class="item-avatar">
+                    <img src="images/mx.jpg" ui-sref="tabs.home.mxzl">
+                    <h2>M系</h2>
+                    <p>制空能力强，炮多，较灵活。缺点就是弹道不好，装甲有点脆。</p>
+                </ion-item>
+                <ion-item class="item-avatar">
+                    <img src="images/rx.jpg">
+                    <h2>R系</h2>
+                    <p>火控好，炮狠，生存能力强。缺点就是速度慢，转向慢，防空感人。</p>
+                </ion-item>
+            </ion-list>
+            <ion-item class="box">
+                <img src="images/zjlx_bg4.png">
+                <div class="row">
+                    <div class="col colBox col-offset-10">
+                        <img src="images/lx3_1.png">
+                    </div>
+                    <div class="col colBox">
+                        <img src="images/lx3_2.png">
+                    </div>
+                    <div class="col colBox">
+                        <img src="images/lx3_3.png">
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-list class="card">
+            <ion-item>
+                <div class="button button-clear button-full button-assertive"
+                     ng-click="data.showH=!data.showH">史上最复杂的武器——航空母舰
+                </div>
+            </ion-item>
+            <ion-list class="item-text-wrap item-remove-animate" ng-hide="data.showH">
+                <ion-item class="item-avatar" ui-sref="tabs.home.mxhm">
+                    <img src="images/mx.jpg">
+                    <h2>M系</h2>
+                    <p>制空能力比较强，容易掌控全局。</p>
+                </ion-item>
+                <ion-item class="item-avatar">
+                    <img src="images/rx.jpg">
+                    <h2>R系</h2>
+                    <p>爆发高，输出猛。</p>
+                </ion-item>
+            </ion-list>
+            <ion-item class="box">
+                <img src="images/zjlx_bg2.png">
+                <div class="row">
+                    <div class="col colBox col-offset-10">
+                        <img src="images/lx4_1.png">
+                    </div>
+                    <div class="col colBox">
+                        <img src="images/lx4_2.png">
+                    </div>
+                    <div class="col colBox">
+                        <img src="images/lx4_3.png">
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <div class="button button-icon ion-arrow-up-a Top " ng-click="Top()"></div>
+</ion-view>

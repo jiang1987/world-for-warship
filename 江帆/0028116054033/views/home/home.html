@@ -1,0 +1,21 @@
+<ion-view>
+    <ion-header-bar class="bar-dark">
+        <button class="button button-clear icon ion-navicon-round" menu-toggle></button>
+        <div class="title headBox"><img src="images/logo.png"></div>
+        <button class="button button-clear button-icon ion-ios-cart-outline " ui-sref="buyCar">
+            <span class="badge badge-assertive">{{totalNumber()}}</span>
+        </button>
+    </ion-header-bar>
+    <div class="bar bar-subheader bar-assertive">
+        <div class="button-bar">
+            <div class="button" ui-sref="tabs.home.zhanjian">战舰百科</div>
+            <div class="button" ui-sref="tabs.home.gaowan">高玩教学</div>
+            <div class="button" ui-sref="tabs.home.tianmao">战舰商城</div>
+            <div class="button" ui-sref="tabs.home.zixun">实时资讯</div>
+        </div>
+    </div>
+    <ion-nav-view name="tab-home1">
+
+    </ion-nav-view>
+</ion-view>
+
