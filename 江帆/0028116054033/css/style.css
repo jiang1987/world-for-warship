@@ -6,15 +6,6 @@
 .headBox, .headBox img {
     height: 100%;
 }
-.headBox img{
-    position: relative;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-    margin:auto;
-}
-
 .colBox, .colBox img {
     height: 50px;
     width: 50px;
@@ -96,4 +87,9 @@ input{
     height:44px;
     width:44px;
     background:#fff;
+}
+.NOAdd{
+    position:absolute !important;
+    top:0 !important;
+    left:-30px !important;
 }
